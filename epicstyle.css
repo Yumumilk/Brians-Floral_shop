@@ -11,20 +11,20 @@
         section {width:95%; padding:10px; box-sizing:border-box; }
         abbr {border-bottom: 3px dotted black; cursor: help}
         footer {background-color:#b2d6ff}
-        footer a {color:rgb(61, 18, 179); text-decoration:none;} /* no underline */
+        footer a {color:rgb(125, 33, 230);}
         footer a:hover {color:rgb(0, 197, 181)}
-        nav {background-color:#b2d6ff; text-align: center; padding: 10px}
-        nav a {color:rgb(61, 18, 179); text-decoration:none;} /* no underline */
+        nav {background-color:#b2d6ff; text-align: center; padding: 20px; font-size: 20px;}
+        nav a {color:rgb(181, 70, 255); text-decoration:none; background-color: #e3f0ff; border: 2px solid #9b58c2;} /* no underline */
         nav a:hover {color:rgb(0, 197, 181)}
         nav nav ul li.selected a {color:white; background-color:gray}
-        nav li {display:inline; list-style:none} /* no bullets */
+        nav li {display:inline; list-style:none;} /* no bullets */
         .Flowers {border: 4px solid #152638; padding: 20px}
         .Holiday {border: 4px solid #4f30db; padding: 20px}
         .Seeds {border: 4px solid #224ab1; padding: 20px}
         .poisonous {color:rgb(255, 0, 0)}
         #Resume { border: 4px solid #074588; padding: 20px; 
                 margin: 20px; background-color: #e7f6ff; box-shadow: 10px 5px 5px #888888; }
-        #Resume a {color:rgb(61, 18, 179); text-decoration:none;} /* no underline */
+        #Resume a {color:rgb(181, 70, 255); text-decoration:none;} /* no underline */
         #Resume a:hover {color:rgb(0, 197, 181)}
         #Whole {border: 4px solid #b2d6ff; padding: 0px; text-align: center}
         #Social {text-align: center; padding: 15px}
