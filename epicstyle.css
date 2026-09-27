@@ -3,6 +3,7 @@
         main {background-image: linear-gradient(to bottom, rgb(255, 255, 255) 0%, #b2d6ff 100%); padding: 12px}
         h1 {color:#4d0080}
         h2 {color:#31175a; text-align: center}
+        h3 {color:#6200ff; text-align: center}
         p {color:rgb(0, 14, 59); font-size: 18px;}
         figcaption {font-size: 20px;}
         span {color:rgb(206, 157, 21)}
@@ -10,18 +11,27 @@
         aside {width:20%; float:left; text-align:right; padding:14px; box-sizing:border-box;}
         section {width:95%; padding:10px; box-sizing:border-box; }
         abbr {border-bottom: 3px dotted black; cursor: help}
+        li {text-align: center; padding: 5px}
+        ul {list-style-image: url(images/yellowflower.png); text-align: center; padding-inline: 20px; font-size: 1.1em}
+        ol {list-style: decimal; text-align: center; padding-inline: 20px; font-size: 1.1em}
+        dl {text-align: center; padding-inline: 20px; font-size: 1.1em}
         footer {background-color:#b2d6ff}
         footer a {color:rgb(125, 33, 230);}
         footer a:hover {color:rgb(0, 197, 181)}
-        nav {background-color:#b2d6ff; text-align: center; padding: 20px; font-size: 20px;}
-        nav a {color:rgb(181, 70, 255); text-decoration:none; background-color: #e3f0ff; border: 2px solid #9b58c2;} /* no underline */
+        nav {background-color:#b2d6ff; text-align: center; padding: 20px; font-size: 1.3em;}
+        nav a {color:rgb(181, 70, 255); text-decoration:none; background-color: #e3f0ff; border: 2px solid #9b58c2; display:block; width:30%;} /* no underline */
         nav a:hover {color:rgb(0, 197, 181)}
         nav nav ul li.selected a {color:white; background-color:gray}
         nav li {display:inline; list-style:none;} /* no bullets */
+        nav li a {border:2px #200077 solid; padding:6px}
+        @media only screen and (min-width: 640px) {nav a {display:inline}
+        nav li {display:inline; padding: 6px; list-style:none;} }
         .Flowers {border: 4px solid #152638; padding: 20px}
         .Holiday {border: 4px solid #4f30db; padding: 20px}
         .Seeds {border: 4px solid #224ab1; padding: 20px}
         .poisonous {color:rgb(255, 0, 0)}
+        #Transcript { border: 4px solid #074588; padding: 20px; 
+                margin: 20px; background-color: #e7f6ff; box-shadow: 10px 5px 5px #888888; }
         #Resume { border: 4px solid #074588; padding: 20px; 
                 margin: 20px; background-color: #e7f6ff; box-shadow: 10px 5px 5px #888888; }
         #Resume a {color:rgb(181, 70, 255); text-decoration:none;} /* no underline */
