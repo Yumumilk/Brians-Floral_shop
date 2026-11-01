@@ -24,53 +24,123 @@
 
         <main>
             <h1>Contact Us</h1>
-            <p>Have a question about flowers, bouquets, or garden supplies? Use the contact information table below to plan your message.</p>
+            <p>Have a question about flowers, bouquets, or garden supplies? Fill out the form below and we will get back to you.</p>
 
             <section>
-                <table class="ContactTable">
-                    <tr>
-                        <th colspan="2" class="ContactTableHeading">Contact Brian's Floral Shop</th>
-                    </tr>
-                    <tr>
-                        <td class="ContactLabel"><b><span class="Required">*</span> First Name</b></td>
-                        <td class="ContactField">Future first-name text box</td>
-                    </tr>
-                    <tr>
-                        <td class="ContactLabel"><b><span class="Required">*</span> Last Name</b></td>
-                        <td class="ContactField">Future last-name text box</td>
-                    </tr>
-                    <tr>
-                        <td class="ContactLabel">City</td>
-                        <td class="ContactField">Future city text box</td>
-                    </tr>
-                    <tr>
-                        <td class="ContactLabel">State (ST)</td>
-                        <td class="ContactField">Future state drop-down menu</td>
-                    </tr>
-                    <tr>
-                        <td class="ContactLabel">ZIP Code</td>
-                        <td class="ContactField">Future ZIP-code text box</td>
-                    </tr>
-                    <tr>
-                        <td class="ContactLabel"><b><span class="Required">*</span> Email</b></td>
-                        <td class="ContactField">Future email text box</td>
-                    </tr>
-                    <tr>
-                        <td class="ContactLabel">Gender</td>
-                        <td class="ContactField">Future options: M / F / Prefer not to say</td>
-                    </tr>
-                    <tr>
-                        <td class="ContactLabel">Education</td>
-                        <td class="ContactField">Future options: AS / BS / Other</td>
-                    </tr>
-                    <tr>
-                        <td class="ContactLabel">Comments</td>
-                        <td class="ContactField">Future comments text area</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" class="ContactButtons">Future buttons: Submit / Reset</td>
-                    </tr>
-                </table>
+                <form name="contactForm" id="contactForm" action="FormProcess.php" method="post">
+                    <input type="hidden" name="subject" value="Brian's Floral Shop Contact Submission">
+                    <input type="hidden" name="redirect" value="contactSent.htm">
+                    <table class="ContactTable">
+                        <tr>
+                            <th colspan="2" class="ContactTableHeading">Contact Brian's Floral Shop</th>
+                        </tr>
+                        <tr>
+                            <td class="ContactLabel"><label for="FirstName"><b><span class="Required">*</span> First Name</b></label></td>
+                            <td class="ContactField"><input type="text" name="FirstName" id="FirstName" size="40" required></td>
+                        </tr>
+                        <tr>
+                            <td class="ContactLabel"><label for="LastName"><b><span class="Required">*</span> Last Name</b></label></td>
+                            <td class="ContactField"><input type="text" name="LastName" id="LastName" size="40" required></td>
+                        </tr>
+                        <tr>
+                            <td class="ContactLabel"><label for="City">City</label></td>
+                            <td class="ContactField"><input type="text" name="City" id="City" size="40"></td>
+                        </tr>
+                        <tr>
+                            <td class="ContactLabel"><label for="ST">State (ST)</label></td>
+                            <td class="ContactField">
+                                <select name="ST" id="ST">
+                                <option value="">None</option>
+                                <option value="FL" selected>Florida</option>
+                                <option value="AL">Alabama</option>
+                                <option value="AK">Alaska</option>
+                                <option value="AZ">Arizona</option>
+                                <option value="AR">Arkansas</option>
+                                <option value="CA">California</option>
+                                <option value="CO">Colorado</option>
+                                <option value="CT">Connecticut</option>
+                                <option value="DE">Delaware</option>
+                                <option value="GA">Georgia</option>
+                                <option value="HI">Hawaii</option>
+                                <option value="ID">Idaho</option>
+                                <option value="IL">Illinois</option>
+                                <option value="IN">Indiana</option>
+                                <option value="IA">Iowa</option>
+                                <option value="KS">Kansas</option>
+                                <option value="KY">Kentucky</option>
+                                <option value="LA">Louisiana</option>
+                                <option value="ME">Maine</option>
+                                <option value="MD">Maryland</option>
+                                <option value="MA">Massachusetts</option>
+                                <option value="MI">Michigan</option>
+                                <option value="MN">Minnesota</option>
+                                <option value="MS">Mississippi</option>
+                                <option value="MO">Missouri</option>
+                                <option value="MT">Montana</option>
+                                <option value="NE">Nebraska</option>
+                                <option value="NV">Nevada</option>
+                                <option value="NH">New Hampshire</option>
+                                <option value="NJ">New Jersey</option>
+                                <option value="NM">New Mexico</option>
+                                <option value="NY">New York</option>
+                                <option value="NC">North Carolina</option>
+                                <option value="ND">North Dakota</option>
+                                <option value="OH">Ohio</option>
+                                <option value="OK">Oklahoma</option>
+                                <option value="OR">Oregon</option>
+                                <option value="PA">Pennsylvania</option>
+                                <option value="RI">Rhode Island</option>
+                                <option value="SC">South Carolina</option>
+                                <option value="SD">South Dakota</option>
+                                <option value="TN">Tennessee</option>
+                                <option value="TX">Texas</option>
+                                <option value="UT">Utah</option>
+                                <option value="VT">Vermont</option>
+                                <option value="VA">Virginia</option>
+                                <option value="WA">Washington</option>
+                                <option value="DC">Washington D.C.</option>
+                                <option value="WV">West Virginia</option>
+                                <option value="WI">Wisconsin</option>
+                                <option value="WY">Wyoming</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ContactLabel"><label for="Zip">ZIP Code</label></td>
+                            <td class="ContactField"><input type="text" name="Zip" id="Zip" size="10" maxlength="5" pattern="[0-9]{5}" title="Enter a five-digit ZIP code"></td>
+                        </tr>
+                        <tr>
+                            <td class="ContactLabel"><label for="Email"><b><span class="Required">*</span> Email</b></label></td>
+                            <td class="ContactField"><input type="email" name="Email" id="Email" size="40" required></td>
+                        </tr>
+                        <tr>
+                            <td class="ContactLabel">Gender</td>
+                            <td class="ContactField">
+                                <label for="M"><input type="radio" name="Gender" id="M" value="M"> M</label>
+                                <label for="F"><input type="radio" name="Gender" id="F" value="F"> F</label>
+                                <label for="PreferNotToSay"><input type="radio" name="Gender" id="PreferNotToSay" value="Prefer not to say"> Prefer not to say</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ContactLabel">Education</td>
+                            <td class="ContactField">
+                                <label for="HS"><input type="checkbox" name="Education[]" id="HS" value="High School"> High School</label>
+                                <label for="College"><input type="checkbox" name="Education[]" id="College" value="College"> College</label>
+                                <label for="Other"><input type="checkbox" name="Education[]" id="Other" value="Other"> Other</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ContactLabel"><label for="Comments"><b><span class="Required">*</span> Comments</b></label></td>
+                            <td class="ContactField"><textarea name="Comments" id="Comments" cols="40" rows="5" placeholder="Enter your comments here" required></textarea></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="ContactButtons">
+                                <input type="reset" name="Reset" value="Reset">
+                                <input type="submit" name="" value="Submit">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
                 <p><span class="Required">*</span> Required fields.</p>
             </section>
         </main>
