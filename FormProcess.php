@@ -28,15 +28,15 @@ if(isset($_POST['Email'])) {
     // Strings need to be enclosed in quotes, so do not use an apostrophe in a field name.
 	
     // SECTION A - assign variables to fields Posted from form      
-    $FirstName = $_POST['FirstName']; // required. (Note in Php - variables start with a $)
-    $LastName = $_POST['LastName']; // required
-    $City = $_POST['City'];
-    $ST = $_POST['ST'];
-    $Zip = $_POST['Zip'];
-    $Gender = $_POST['Gender']; // NOT required	
-    $Education = $_POST['Education'];
-    $Email = $_POST['Email']; // required
-    $Comments = $_POST['Comments']; // required
+    $FirstName = $_POST["FirstName"]; // required. (Note in Php - variables start with a $)
+    $LastName = $_POST["LastName"]; // required
+    $City = $_POST["City"];
+    $ST = $_POST["ST"];
+    $Zip = $_POST["Zip"];
+    $Gender = $_POST["Gender"]; // NOT required	
+    $Education = $_POST["Education"];
+    $Email = $_POST["Email"]; // required
+    $Comments = $_POST["Comments"]; // required
 
     $email_message = "Form details for briank1772@gmail.com below:\n\n"; // the /n simply means New line
      
@@ -68,7 +68,7 @@ $headers = 'From: '.$Email."\r\n". // carriage Return and New line
 <!-- place your own Contact Sent message or link to a Contact Sent.htm file below -->
 <html>
 <head>
-<meta http-equiv="REFRESH" content="1;url=contactSent.htm">
+<meta http-equiv="REFRESH" content="1;url=contactSent.html">
 </head>
 <body>
 </body>
