@@ -12,8 +12,8 @@
     
 if(isset($_POST['Email'])) {
     // CHANGE THE TWO LINES BELOW
-    $email_to = "yourName@yourDomainName.com";
-    $email_subject = "Demo online form submission";
+    $email_to = "briank1772@gmail.com";
+    $email_subject = "Online form demonstration";
        
     function died($error) {
         // your error code can go here. Echo is the Php command to display to screen
