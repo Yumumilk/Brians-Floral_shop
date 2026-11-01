@@ -30,12 +30,15 @@ if(isset($_POST['Email'])) {
     // SECTION A - assign variables to fields Posted from form      
     $FirstName = $_POST['FirstName']; // required. (Note in Php - variables start with a $)
     $LastName = $_POST['LastName']; // required
+    $City = $_POST['City'];
+    $ST = $_POST['ST'];
+    $Zip = $_POST['Zip'];
     $Gender = $_POST['Gender']; // NOT required	
-    $email_from = $_POST['Email']; // required
-    $Telephone = $_POST['Telephone']; // NOT required
+    $Education = $_POST['Education'];
+    $Email = $_POST['Email']; // required
     $Comments = $_POST['Comments']; // required
 
-    $email_message = "Form details for yourName@yourDomainName.com below:\n\n"; // the /n simply means New line
+    $email_message = "Form details for briank1772@gmail.com below:\n\n"; // the /n simply means New line
      
     function clean_string($string) {
       $bad = array("content-type","bcc:","to:","cc:","href");
@@ -45,16 +48,18 @@ if(isset($_POST['Email'])) {
     // SECTION B - prepare email based on variables assigned to fields Posted from form       
     $email_message .= "First Name: ".clean_string($FirstName)."\n";
     $email_message .= "Last Name: ".clean_string($LastName)."\n";
+    $email_message .= "City: ".clean_string($City)."\n";
+    $email_message .= "ST: ".clean_string($ST)."\n";
+    $email_message .= "Zip: ".clean_string($Zip)."\n";
     $email_message .= "Gender: ".clean_string($Gender)."\n";
-    $email_message .= "Email: ".clean_string($email_from)."\n";
-    $email_message .= "Telephone: ".clean_string($Telephone)."\n";
+    $email_message .= "Email: ".clean_string($Email)."\n";
     $email_message .= "Comments: ".clean_string($Comments)."\n";
 	
     // *** Tap [Ctrl] + [F5] to Force Hard Reload/Refresh if you modify the PHP code.
      
 // create email header for recipient showing senders email address as the email from
-$headers = 'From: '.$email_from."\r\n". // carriage Return and New line
-'Reply-To: '.$email_from."\r\n" .       // . is for Concatenation
+$headers = 'From: '.$Email."\r\n". // carriage Return and New line
+'Reply-To: '.$Email."\r\n" .       // . is for Concatenation
 'X-Mailer: PHP/' . phpversion();
 @mail($email_to, $email_subject, $email_message, $headers);
 // @mail($email_copy, $email_subject, $email_message, $headers); 
