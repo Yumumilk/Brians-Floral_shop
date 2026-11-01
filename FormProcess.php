@@ -61,7 +61,10 @@ if(isset($_POST['Email'])) {
 $headers = 'From: '.$Email."\r\n". // carriage Return and New line
 'Reply-To: '.$Email."\r\n" .       // . is for Concatenation
 'X-Mailer: PHP/' . phpversion();
-@mail($email_to, $email_subject, $email_message, $headers);
+if (!mail($email_to, $email_subject, $email_message, $headers)) {
+    echo "The server failed to send the email. Please contact your host.";
+    die();
+}
 // @mail($email_copy, $email_subject, $email_message, $headers); 
 ?>
  
