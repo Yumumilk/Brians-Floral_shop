@@ -32,7 +32,7 @@ if(isset($_POST['Email'])) {
     $LastName = $_POST['LastName']; // required
     $City = $_POST['City'];
     $ST = $_POST['ST'];
-    $Zip = $_POST'Zip'];
+    $Zip = $_POST['Zip'];
     $Gender = $_POST['Gender']; // NOT required	
     $Education = $_POST['Education'];
     $Email = $_POST['Email']; // required
