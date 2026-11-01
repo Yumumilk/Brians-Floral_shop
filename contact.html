@@ -27,7 +27,8 @@
             <p>Have a question about flowers, bouquets, or garden supplies? Fill out the form below and we will get back to you.</p>
 
             <section>
-                <form name="contactForm" id="contactForm" action="FormProcess.php" method="post">
+                <form name="contactForm" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="fd8e700d-cdb9-4b82-851a-96a29c181bca">
                     <input type="hidden" name="subject" value="Brian's Floral Shop Contact Submission">
                     <input type="hidden" name="redirect" value="contactSent.html">
                     <table class="ContactTable">
